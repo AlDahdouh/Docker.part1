@@ -1,0 +1,8 @@
+docker pull devopsdockeruh/ports_exercise
+docker run -d -p 80:80 devopsdockeruh/ports_exercise
+
+docker port b7a
+80/tcp -> 0.0.0.0:80
+
+http://localhost/
+Ports configured correctly!!

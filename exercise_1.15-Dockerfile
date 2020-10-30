@@ -1,0 +1,11 @@
+FROM ubuntu:16.04
+RUN apt-get update && apt-get install -y curl
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
+RUN apt-get install nodejs git-core -y
+RUN git clone https://github.com/AlDahdouh/PhonebookBackend.git
+WORKDIR /PhonebookBackend
+RUN npm install
+EXPOSE 3001
+ENV MONGODB_URI=mongodb+srv://<db_name>:<password>@cluster0.xbn3a.mongodb.net/<dbname>?retryWrites=true&w=majority
+ENTRYPOINT ["npm"]
+CMD ["start"]

@@ -1,0 +1,24 @@
+alaa# docker run -d devopsdockeruh/exec_bash_exercise
+a88a9c53b9ce1ea234a6b7d73cbf5c477c1409fbd7dd8d03d549e7b163bba0e1
+alaa# docker container ls
+CONTAINER ID        IMAGE                               COMMAND                  CREATED             STATUS              PORTS               NAMES
+a88a9c53b9ce        devopsdockeruh/exec_bash_exercise   "docker-entrypoint.s…"   2 minutes ago       Up 2 minutes                            agitated_volhard
+docker exec -it a88a9c53b9ce bash
+root@a88a9c53b9ce:/usr/app# tail -f ./logs.txt
+Tue, 27 Oct 2020 19:48:57 GMT
+Secret message is:
+"Docker is easy"
+Tue, 27 Oct 2020 19:49:03 GMT
+Tue, 27 Oct 2020 19:49:06 GMT
+Tue, 27 Oct 2020 19:49:09 GMT
+Tue, 27 Oct 2020 19:49:12 GMT
+Secret message is:
+"Docker is easy"
+Tue, 27 Oct 2020 19:49:18 GMT
+Tue, 27 Oct 2020 19:49:21 GMT
+Tue, 27 Oct 2020 19:49:24 GMT
+Tue, 27 Oct 2020 19:49:27 GMT
+^C
+root@a88a9c53b9ce:/usr/app# exit
+exit
+alaa# docker stop a88

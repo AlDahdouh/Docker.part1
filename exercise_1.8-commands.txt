@@ -1,0 +1,8 @@
+/mydir# touch logs.txt
+/mydir# ls
+Dockerfile  fetcher.sh  Imgur-JY5tHqr.mp4  logs.txt
+
+/mydir# docker run -v $(pwd)/logs.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise 
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+^CClosing file

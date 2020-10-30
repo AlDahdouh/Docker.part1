@@ -1,0 +1,8 @@
+docker build -t docker-clock .
+docker images
+docker run docker-clock
+docker run docker-clock -c
+docker stop d45
+
+docker run docker-clock -c 10
+docker stop ea55

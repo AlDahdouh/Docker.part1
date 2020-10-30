@@ -1,0 +1,24 @@
+The image (my-dev-os) starts from ubuntu and install 3 programming languages which I prefer to work with:
+1. Java: 
+	openjdk 1.8 is installed 
+2. Node.js:
+	Node v10.23 is installed
+3. Python:
+	Python 3.8.5 is installed
+
+You can create a container using the following command:
+docker run -it my-dev-os
+ 
+
+
+Check the installation from inside the container as follows:
+
+root@a103024157ff:/# python -V
+Python 3.8.5
+root@a103024157ff:/# node -v
+v10.23.0
+root@a103024157ff:/# java -version
+openjdk version "1.8.0_272"
+OpenJDK Runtime Environment (build 1.8.0_272-8u272-b10-0ubuntu1~20.04-b10)
+OpenJDK 64-Bit Server VM (build 25.272-b10, mixed mode)
+root@a103024157ff:/# 

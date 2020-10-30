@@ -1,0 +1,25 @@
+FROM ubuntu:latest
+# java settings
+RUN apt-get update && \
+	apt-get install -y openjdk-8-jdk && \
+	apt-get install -y ant && \
+	apt-get clean && \
+	rm -rf /var/lib/apt/lists/* && \
+	rm -rf /var/cache/oracle-jdk8-installer;
+	
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
+RUN export JAVA_HOME
+
+# Node.js
+RUN apt-get update \
+	&& apt-get install -y curl \
+	&& curl -sL https://deb.nodesource.com/setup_10.x | bash \
+	&& apt-get install nodejs git-core -y
+
+# Python 3
+RUN    apt-get update  \
+	&& apt-get -y install python3.6 \ 
+	&& cd /usr/local/bin \
+	&& ln -s /usr/bin/python3 python
+
+CMD ["/bin/bash"]
